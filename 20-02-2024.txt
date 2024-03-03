@@ -1,0 +1,79 @@
+#include <stdio.h>
+
+void main(){
+    int Total;
+    printf("Enter amount :");
+    scanf("%d",&Total);
+    int coins = Total / 5; // 15 / 5 , 3
+    //printf("Rs.5 coins needed = %d", coins);
+    int remainingAmount = Total % 5; // 0
+    if(remainingAmount == 1 || remainingAmount == 2){ //  or 2
+        coins += 1;
+        printf("Rs.1 coins needed = %d", coins);
+    }
+    else if(remainingAmount != 0){
+        coins += 2;
+    }
+    printf("%d",coins);
+    return;
+}
+
+
+#include<stdio.h>
+
+int main(){
+    int arr[2][3];
+    arr[0][0] = 10;
+    arr[0][1] = 20;
+    arr[0][2] = 30;
+    
+    arr[1][0] = 100;
+    arr[1][1] = 200;
+    arr[1][2] = 300;
+    int totalRow = 2;
+    int totalCol = 3;
+    for(int curCol = 0; curCol < totalCol; curCol++){ // help us to travel on cols
+        for(int curRow = 0; curRow < totalRow; curRow++){ // help us to travel on rows
+            printf("%d  ", arr[curRow][curCol]);
+            //printf("%d  ", arr[curCol][curRow]);
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+#include<stdio.h>
+
+int main(){
+    int arr[2][3];
+    arr[0][0] = 10;
+    arr[0][1] = 20;
+    arr[0][2] = 30;
+    
+    arr[1][0] = 100;
+    arr[1][1] = 200;
+    arr[1][2] = 300;
+    int totalRow = 2;
+    int totalCol = 3;
+    for(int curRow = 0; curRow < totalRow; curRow++){ // help us to travel on rows
+        for(int curCol = 0; curCol < totalCol; curCol++){ // help us to travel on cols
+            printf("%d  ", arr[curRow][curCol]);
+            [0][0] , [0][1] , [0][2]
+            [1][0], [1][1]........
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+
+#include<stdio.h>
+
+int main(){
+    int arr[10];
+    for(int i = 0; i < 10; i++){
+        printf("%d ", arr[i]);
+    }
+    return 0;
+}
+

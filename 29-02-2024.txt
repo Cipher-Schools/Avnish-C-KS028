@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include<limits.h>
+
+int main(){
+    int n; scanf("%d", &n);
+    int arr[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int mini = INT_MAX;
+    int maxi = INT_MINI;
+    
+    for(int i = 0; i < n; i++){
+        mini = min(mini, arr[i]);
+        maxi = max(maxi, arr[i]);
+    }
+    for(int range = mini; range <= max; range++){
+        int found = 0;
+        for(int i = 0; i < n; i++){
+            if(arr[i] == range){
+                found = 1;
+                break;
+            }  
+        }
+        if(found == 0){
+            printf(range);
+            return 0;
+        }
+    }
+    printf(maxi + 1);
+}

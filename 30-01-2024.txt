@@ -1,0 +1,41 @@
+#include <stdio.h>
+#define pi 3.14 //macros
+int main(){
+    const int a = 10;
+    printf("%d %f", a, pi);
+    return 0;
+}
+
+#include <stdio.h>
+#define pi 3.14
+int main(){
+    int size_of_int = sizeof(char);
+    printf("%d", size_of_int);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+    char gender = 'k';
+    printf("%d", gender);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+    float a = 1.145;
+    printf("%f", a);
+    return 0;
+}
+
+#include <stdio.h>
+
+int main(){
+    int a = 10;
+    int*b = & a;
+    printf("%d", *b);
+    return 0;
+}
+

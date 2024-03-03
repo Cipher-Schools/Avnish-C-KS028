@@ -1,0 +1,23 @@
+#include<stdio.h>
+
+void Table(int startPoint, int endPoint){ // 3 6
+    if(startPoint > endPoint){
+        return ;
+    }
+    static int times = 1; // 1
+    if(times == 11){ 
+        printf("\n\n");
+        times  = 1;
+        Table(startPoint + 1, endPoint);
+        return ;
+    }
+    // 3 * 1 = 3(ans, product)
+    printf("%d * %d = %d\n", startPoint, times++, startPoint * times); // 6 * 1 = 6
+    Table(startPoint, endPoint);
+}
+
+
+int main(){
+    Table(6, 10);
+    return 0;
+}

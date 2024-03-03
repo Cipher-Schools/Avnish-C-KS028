@@ -1,0 +1,24 @@
+#include<stdio.h>
+
+void Table(int n){ //3
+    static int times = 1; //11
+    if(times > 10){
+        times = 1;
+        return ;
+    }
+    printf("%d * %d = %d\n", n, times++, n * times); // 10
+    Table(n);
+}
+
+void PrintTables(int sp, int ep){ // 3 7 
+    if(sp > ep){
+        return ;
+    }
+    Table(sp);
+    PrintTables(sp + 1, ep);
+}
+
+int main(){
+    PrintTables(3, 7);
+    return 0;
+}

@@ -1,0 +1,59 @@
+#include<stdio.h>
+
+void swap(int *, int *);
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("\nN = %d", n);
+    printf("\nM = %d", m);
+    swap(&n, &m);
+    printf("\nN = %d", n);
+    printf("\nM = %d", m);
+    return 0;
+}
+
+
+void swap(int* n, int* m){
+    int helper = *n; // extracting the value from given address/pointer
+    *n = *m;
+    *m = helper;
+}
+
+#include<stdio.h>
+
+void swap(int, int);
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    printf("\nN = %d", n);
+    printf("\nM = %d", m);
+    swap(n, m);
+    printf("\nN = %d", n);
+    printf("\nM = %d", m);
+    return 0;
+}
+
+
+void swap(int n, int m){
+    int helper = n;
+    n = m;
+    m = helper;
+}
+
+#include<stdio.h>
+
+int add(int, int);
+
+int add(int a, int b){
+    return (a + b);
+}
+
+int main(){
+    int n, m;
+    scanf("%d %d", &n, &m);
+    int c = add(n, m);
+    printf("Sum = %d", c);
+    return 0;
+}
