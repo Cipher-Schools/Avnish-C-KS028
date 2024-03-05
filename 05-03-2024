@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int *ptr; int n;
+    printf("Enter your array size : ");
+    scanf("%d", &n);
+    ptr = (int* )malloc(n * sizeof(int));
+    if(ptr == NULL){
+        printf("memory not given, bcoz running out of space");
+    }else{
+        for(int i = 0; i < n; i++){
+            ptr[i] = i + 100;
+        }
+        for(int i = 0; i < n; i++){
+            printf("%d, ", ptr[i]);
+        }
+    }
+    return 0;
+}
