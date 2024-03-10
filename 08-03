@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+
+int main(){
+    int n;
+    printf("Enter the size of Array : ");
+    scanf("%d", &n);
+    if(n <= 0){
+        return 0;
+    }
+    int arr[n];
+    for(int i = 0; i < n; i++){
+        scanf("%d", &arr[i]);
+    }
+    int allPos = 1;
+    int allNeg = 1;
+    int comb = 0;
+    for(int i = 0; i < n; i++){
+        if(arr[i] < 0){
+            allPos = 0;
+        }
+        else{
+            allNeg = 0;
+        }
+    }
+    if(allNeg == 0 && allPos == 0){
+        int sum = 0;
+        for(int i = 0; i < n; i++){
+            if(arr[i] > 0){
+                sum += arr[i];
+            }
+        }
+        printf("Max sum of Subsequence = %d", sum);
+    }
+    else if(allPos == 1){
+        int sum = 0;
+        for(int i = 0; i < n; i++){
+            sum += arr[i];
+        }
+        printf("Max sum of Subsequence = %d", sum);
+    }
+    else{
+        int sum = arr[0];
+        for(int i = 1; i < n; i++){
+            if(arr[i] > sum){
+                sum = arr[i];
+            }
+        }
+        printf("Max sum of Subsequence = %d", sum);
+    }
+    return 0;
+}
