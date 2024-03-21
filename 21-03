@@ -1,0 +1,22 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+void fn(int Amt, int& Ans){
+    if(Amt <= 0){
+        if(Amt == 0){
+            Ans++;
+        }
+        return;
+    }
+    fn(Amt - 1, Ans);
+    fn(Amt - 2, Ans);
+    fn(Amt - 5, Ans);
+}
+
+int main(){
+    int n; cin >> n;
+    int ans = 0;
+    fn(n, ans);
+    cout << ans << endl;
+    return 0;
+}
